@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra sua nacionalidade</title>
+    <style>
+        body{
+            background: darkblue;
+        }
+        h1 {
+            color: black;
+            font: normal Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descubra sua nacionalidade</h1>
+    Nome do seu país: <input type="text" name="pais" id="pais">
+    <input type="button" value="Descobrir" onclick='saber()'>
+    <div id="res">
+
+    </div>
+    <script>
+        
+        function saber(){
+            var p = document.getElementById('pais')
+            var res = document.querySelector('div#res')
+            res.innerHTML = `<p>Seu país é ${p.value}.</p>`
+            if (p.value == 'Brasil') {
+                 res.innerHTML += `Sua nacionalidade é brasileira.</br>`
+            } else {
+                res.innerHTML += `Sua nacionalidade é estrangeira.</br>`
+            }
+        }
+    </script>
+</body>
+</html>
